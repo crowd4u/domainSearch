@@ -43,7 +43,7 @@ export default Vue.extend({
   methods: {
     searchByDomain (domain:string) {
       var form = document.createElement('form')
-      form.setAttribute('action', 'http://www.google.com/search')
+      form.setAttribute('action', 'https://www.google.com/search')
       form.setAttribute('method', 'get')
       form.setAttribute('target', '_blank')
       form.style.display = 'none'
