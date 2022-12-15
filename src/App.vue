@@ -21,14 +21,14 @@
             {{ domain }}で検索する
           </v-btn>
       </v-row>
-      <!-- <v-btn
+      <v-btn
         class="button"
         @click="
             searchByAllDomain()
         "
         >
-          全てのドメインで検索する（まだ出来てない）
-      </v-btn> -->
+          全てのドメインで同時に検索する
+      </v-btn>
   </v-container>
   </div>
 </template>
@@ -42,7 +42,7 @@ export default Vue.extend({
   }),
   methods: {
     searchByDomain (domain:string) {
-      var form = document.createElement('form')
+      var form:HTMLFormElement = document.createElement('form')
       form.setAttribute('action', 'https://www.google.com/search')
       form.setAttribute('method', 'get')
       form.setAttribute('target', '_blank')
@@ -50,23 +50,22 @@ export default Vue.extend({
       document.body.appendChild(form)
 
       if (this.query !== undefined) {
-        var inputDomain = document.createElement('input')
+        var inputDomain:HTMLInputElement = document.createElement('input')
         inputDomain.setAttribute('type', 'hidden')
         inputDomain.setAttribute('name', 'as_sitesearch')
         inputDomain.setAttribute('value', domain)
         form.appendChild(inputDomain)
 
-        var inputQuery = document.createElement('input')
+        var inputQuery:HTMLInputElement = document.createElement('input')
         inputQuery.setAttribute('type', 'text')
         inputQuery.setAttribute('name', 'query')
         inputQuery.setAttribute('value', this.query)
         form.appendChild(inputQuery)
       }
-      console.log(form)
       form.submit()
     },
     searchByAllDomain () {
-      var form = document.createElement('form')
+      var form:HTMLFormElement = document.createElement('form')
       form.setAttribute('action', 'https://www.google.com/search')
       form.setAttribute('method', 'get')
       form.setAttribute('target', '_blank')
@@ -74,19 +73,22 @@ export default Vue.extend({
       document.body.appendChild(form)
 
       if (this.query !== undefined) {
+        var siteQuery = 'site:'
+        const last:string = this.domainList[this.domainList.length - 1]
         for (const domain of this.domainList) {
-          var inputDomain = document.createElement('input')
-          inputDomain.setAttribute('type', 'hidden')
-          inputDomain.setAttribute('name', 'as_sitesearch')
-          inputDomain.setAttribute('value', domain)
-          form.appendChild(inputDomain)
-          var inputQuery = document.createElement('input')
-          inputQuery.setAttribute('type', 'text')
-          inputQuery.setAttribute('name', 'query')
-          inputQuery.setAttribute('value', this.query)
-          form.appendChild(inputQuery)
-          form.submit()
+          if (domain !== last) {
+            siteQuery += domain + ' OR site:'
+          } else {
+            siteQuery += ' ' + domain
+          }
         }
+        const query:string = this.query + ' ' + siteQuery
+        var inputQuery:HTMLInputElement = document.createElement('input')
+        inputQuery.setAttribute('type', 'text')
+        inputQuery.setAttribute('name', 'query')
+        inputQuery.setAttribute('value', query)
+        form.appendChild(inputQuery)
+        form.submit()
       }
     }
   }
