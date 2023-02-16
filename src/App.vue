@@ -81,7 +81,9 @@ export default Vue.extend({
       form.style.display = 'none'
       document.body.appendChild(form)
 
-      if (this.query !== undefined) {
+      if (this.query === '') {
+        window.open(domain)
+      } else if (this.query !== undefined) {
         var inputDomain:HTMLInputElement = document.createElement('input')
         inputDomain.setAttribute('type', 'hidden')
         inputDomain.setAttribute('name', 'as_sitesearch')
@@ -93,8 +95,8 @@ export default Vue.extend({
         inputQuery.setAttribute('name', 'query')
         inputQuery.setAttribute('value', this.query)
         form.appendChild(inputQuery)
+        form.submit()
       }
-      form.submit()
     },
     searchByAllDomain () {
       var form:HTMLFormElement = document.createElement('form')
