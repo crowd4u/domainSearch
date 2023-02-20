@@ -55,24 +55,40 @@ export default Vue.extend({
         url: 'from19to36'
       },
       {
-        university: 'Central China Normal University',
+        university: 'Central China Normal University(翻訳済み)',
         url: 'https://imd-ccnu-edu-cn.translate.goog/szdw2/zrjs.htm?_x_tr_sch=http&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=ja&_x_tr_pto=wapp'
       },
       {
-        university: 'Chinese Academy of Sciences, University of the',
+        university: 'Central China Normal University',
+        url: 'http://imd.ccnu.edu.cn/szdw2/zrjs.htm'
+      },
+      {
+        university: 'University of the Chinese Academy of Sciences(翻訳済み)',
         url: 'https://www-las-cas-cn.translate.goog/yjsjy2021/dsdw2021/dsjs2021/?_x_tr_sch=http&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=ja&_x_tr_pto=wapp'
       },
       {
-        university: 'Chung-Ang University',
+        university: 'University of the Chinese Academy of Sciences',
+        url: 'http://www.las.cas.cn/yjsjy2021/dsdw2021/dsjs2021/'
+      },
+      {
+        university: 'Chung-Ang University(翻訳済み)',
         url: 'https://society-cau-ac-kr.translate.goog/class/sub04.asp?_x_tr_sch=http&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=ja&_x_tr_pto=wapp'
+      },
+      {
+        university: 'Chung-Ang University',
+        url: 'http://lis.cau.ac.kr/01_info/info_03a.php'
       },
       {
         university: 'Curtin University',
         url: 'https://www.curtin.edu.au/about/learning-teaching/humanities/school-of-media-creative-arts-and-social-inquiry/our-people/'
       },
       {
-        university: 'Ewha Womans University',
+        university: 'Ewha Womans University(翻訳済み)',
         url: 'https://cms-ewha-ac-kr.translate.goog/user/indexSub.action?codyMenuSeq=6335770&siteId=elis1959&menuUIType=top&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=ja&_x_tr_pto=wapp'
+      },
+      {
+        university: 'Ewha Womans University',
+        url: 'https://cms.ewha.ac.kr/user/indexSub.action?codyMenuSeq=6335770&siteId=elis1959&menuUIType=top'
       },
       {
         university: 'Hong Kong, University of',
@@ -91,8 +107,12 @@ export default Vue.extend({
         url: 'https://home.kku.ac.th/icm/main/index.php/teachers-en'
       },
       {
-        university: 'Kyungpook National University',
+        university: 'Kyungpook National University(翻訳済み)',
         url: 'https://widit-knu-ac-kr.translate.goog/lis/Professors.htm?_x_tr_sch=http&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=ja&_x_tr_pto=wapp'
+      },
+      {
+        university: 'Kyungpook National University',
+        url: 'http://widit.knu.ac.kr/lis/Professors.htm'
       },
       {
         university: 'Kyushu University',
@@ -135,8 +155,12 @@ export default Vue.extend({
         url: 'https://www.lis.ntu.edu.tw/english/?page_id=71'
       },
       {
-        university: 'Peking University',
+        university: 'Peking University(翻訳済み)',
         url: 'https://www-im-pku-edu-cn.translate.goog/szll/syry/index.htm?_x_tr_sch=http&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=ja&_x_tr_pto=wapp'
+      },
+      {
+        university: 'Peking University',
+        url: 'http://www.im.pku.edu.cn/szll/syry/index.htm'
       },
       {
         university: 'Philippines, University of the',
@@ -151,12 +175,20 @@ export default Vue.extend({
         url: 'https://convergence.snu.ac.kr/page/professor.php?lang=en'
       },
       {
-        university: 'Shanghai University',
+        university: 'Shanghai University(翻訳済み)',
         url: 'https://ischool-shu-edu-cn.translate.goog/xscy/zyjs.htm?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=ja&_x_tr_pto=wapp'
       },
       {
-        university: 'Soochow University',
+        university: 'Shanghai University',
+        url: 'https://ischool.shu.edu.cn/xscy/zyjs.htm'
+      },
+      {
+        university: 'Soochow University(翻訳済み)',
         url: 'https://shxy-suda-edu-cn.translate.goog/15323/list.htm?_x_tr_sch=http&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=ja&_x_tr_pto=wapp'
+      },
+      {
+        university: 'Soochow University',
+        url: 'http://shxy.suda.edu.cn/15323/list.htm'
       },
       {
         university: 'Sukhothai Thammathirat Open University',
@@ -199,8 +231,12 @@ export default Vue.extend({
         url: 'https://yonsei.pure.elsevier.com/en/organisations/department-of-library-and-information-science/persons/'
       },
       {
-        university: 'Zhengzhou University',
+        university: 'Zhengzhou University(翻訳済み)',
         url: 'https://www5-zzu-edu-cn.translate.goog/xxgl/info/1011/1476.htm?_x_tr_sch=http&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=ja&_x_tr_pto=wapp4'
+      },
+      {
+        university: 'Zhengzhou University',
+        url: 'http://www5.zzu.edu.cn/xxgl/info/1011/1476.htm'
       }
     ]
   }),
@@ -222,7 +258,7 @@ export default Vue.extend({
         } else if (domain.url !== last?.url) {
           siteQuery += domain.url + ' OR site:'
         } else {
-          siteQuery += ' ' + domain.url
+          siteQuery += domain.url
         }
       }
       const query: string = '( ' + siteQuery + ' ) ' + this.query
@@ -248,14 +284,26 @@ export default Vue.extend({
           alert('検索するドメイン数を18以下にしてください')
         } else if (filter1 === 18) {
           const obj = [] as domain[]
-          for (let i = 2; i < 21; i++) {
-            obj.push(this.domains[i])
+          for (let i = this.domains.findIndex(e => e.university === 'Central China Normal University'); i < this.domains.length; i++) {
+            if (this.domains[i].url.indexOf('translate.goog') === -1) {
+              if (obj.length < 19) {
+                obj.push(this.domains[i])
+              } else {
+                break
+              }
+            }
           }
           this.createForm(obj)
         } else if (filter2 === 18) {
           const obj = [] as domain[]
-          for (let i = 21; i < 39; i++) {
-            obj.push(this.domains[i])
+          for (let i = this.domains.findIndex(e => e.university === 'National Taiwan University'); i < this.domains.length; i++) {
+            if (this.domains[i].url.indexOf('translate.goog') === -1) {
+              if (obj.length < 18) {
+                obj.push(this.domains[i])
+              } else {
+                break
+              }
+            }
           }
           this.createForm(obj)
         } else {
