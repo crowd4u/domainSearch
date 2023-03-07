@@ -291,35 +291,47 @@ export default Vue.extend({
       form.appendChild(inputQuery)
       form.submit()
     },
+    validQuery () {
+      if (this.query === '') {
+        alert('Please enter a query.')
+        return false
+      } else {
+        return true
+      }
+    },
     searchByDomain (domain: string) {
-      const url = `https://www.google.com/search?q=site:${domain} ${this.query}`
-      window.open(url, '_blank')
+      if (this.validQuery()) {
+        const url = `https://www.google.com/search?q=site:${domain} ${this.query}`
+        window.open(url, '_blank')
+      }
     },
     searchByAllDomain (flag: string) {
-      if (flag === 'from1to18') {
-        const obj = [] as domain[]
-        for (let i = this.domains.findIndex(e => e.university === 'Central China Normal University'); i < this.domains.length; i++) {
-          if (this.domains[i].url.indexOf('translate.goog') === -1) {
-            if (obj.length < 19) {
-              obj.push(this.domains[i])
-            } else {
-              break
+      if (this.validQuery()) {
+        if (flag === 'from1to18') {
+          const obj = [] as domain[]
+          for (let i = this.domains.findIndex(e => e.university === 'Central China Normal University'); i < this.domains.length; i++) {
+            if (this.domains[i].url.indexOf('translate.goog') === -1) {
+              if (obj.length < 19) {
+                obj.push(this.domains[i])
+              } else {
+                break
+              }
             }
           }
-        }
-        this.createForm(obj)
-      } else if (flag === 'from19to36') {
-        const obj = [] as domain[]
-        for (let i = this.domains.findIndex(e => e.university === 'National Taiwan University'); i < this.domains.length; i++) {
-          if (this.domains[i].url.indexOf('translate.goog') === -1) {
-            if (obj.length < 18) {
-              obj.push(this.domains[i])
-            } else {
-              break
+          this.createForm(obj)
+        } else if (flag === 'from19to36') {
+          const obj = [] as domain[]
+          for (let i = this.domains.findIndex(e => e.university === 'National Taiwan University'); i < this.domains.length; i++) {
+            if (this.domains[i].url.indexOf('translate.goog') === -1) {
+              if (obj.length < 18) {
+                obj.push(this.domains[i])
+              } else {
+                break
+              }
             }
           }
+          this.createForm(obj)
         }
-        this.createForm(obj)
       }
     }
   }
