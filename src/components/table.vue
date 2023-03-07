@@ -26,7 +26,7 @@
       <v-card-title>
         Search individually
         <v-spacer></v-spacer>
-        <v-text-field v-model="search" append-icon="mdi-magnify" label="Search for registered universities" single-line hide-details></v-text-field>
+        <v-text-field v-model="search" append-icon="mdi-magnify" label="search for the registrered institution" single-line hide-details></v-text-field>
       </v-card-title>
       <v-data-table :headers="headers" :items="domains" :search="search" :items-per-page="-1">
         <template v-slot:[`item.university`]="{ item }">
