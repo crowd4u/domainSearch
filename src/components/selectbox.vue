@@ -55,7 +55,7 @@ export default Vue.extend({
         url: 'from19to36'
       },
       {
-        university: 'Central China Normal University(翻訳済み)',
+        university: 'Central China Normal University(google translate)',
         url: 'https://imd-ccnu-edu-cn.translate.goog/szdw2/zrjs.htm?_x_tr_sch=http&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=ja&_x_tr_pto=wapp'
       },
       {
@@ -63,7 +63,7 @@ export default Vue.extend({
         url: 'http://imd.ccnu.edu.cn/szdw2/zrjs.htm'
       },
       {
-        university: 'University of the Chinese Academy of Sciences(翻訳済み)',
+        university: 'University of the Chinese Academy of Sciences(google translate)',
         url: 'https://www-las-cas-cn.translate.goog/yjsjy2021/dsdw2021/dsjs2021/?_x_tr_sch=http&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=ja&_x_tr_pto=wapp'
       },
       {
@@ -71,7 +71,7 @@ export default Vue.extend({
         url: 'http://www.las.cas.cn/yjsjy2021/dsdw2021/dsjs2021/'
       },
       {
-        university: 'Chung-Ang University(翻訳済み)',
+        university: 'Chung-Ang University(google translate)',
         url: 'https://society-cau-ac-kr.translate.goog/class/sub04.asp?_x_tr_sch=http&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=ja&_x_tr_pto=wapp'
       },
       {
@@ -83,7 +83,7 @@ export default Vue.extend({
         url: 'https://www.curtin.edu.au/about/learning-teaching/humanities/school-of-media-creative-arts-and-social-inquiry/our-people/'
       },
       {
-        university: 'Ewha Womans University(翻訳済み)',
+        university: 'Ewha Womans University(google translate)',
         url: 'https://cms-ewha-ac-kr.translate.goog/user/indexSub.action?codyMenuSeq=6335770&siteId=elis1959&menuUIType=top&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=ja&_x_tr_pto=wapp'
       },
       {
@@ -107,7 +107,7 @@ export default Vue.extend({
         url: 'https://home.kku.ac.th/icm/main/index.php/teachers-en'
       },
       {
-        university: 'Kyungpook National University(翻訳済み)',
+        university: 'Kyungpook National University(google translate)',
         url: 'https://widit-knu-ac-kr.translate.goog/lis/Professors.htm?_x_tr_sch=http&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=ja&_x_tr_pto=wapp'
       },
       {
@@ -155,7 +155,7 @@ export default Vue.extend({
         url: 'https://www.lis.ntu.edu.tw/english/?page_id=71'
       },
       {
-        university: 'Peking University(翻訳済み)',
+        university: 'Peking University(google translate)',
         url: 'https://www-im-pku-edu-cn.translate.goog/szll/syry/index.htm?_x_tr_sch=http&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=ja&_x_tr_pto=wapp'
       },
       {
@@ -175,7 +175,7 @@ export default Vue.extend({
         url: 'https://convergence.snu.ac.kr/page/professor.php?lang=en'
       },
       {
-        university: 'Shanghai University(翻訳済み)',
+        university: 'Shanghai University(google translate)',
         url: 'https://ischool-shu-edu-cn.translate.goog/xscy/zyjs.htm?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=ja&_x_tr_pto=wapp'
       },
       {
@@ -183,7 +183,7 @@ export default Vue.extend({
         url: 'https://ischool.shu.edu.cn/xscy/zyjs.htm'
       },
       {
-        university: 'Soochow University(翻訳済み)',
+        university: 'Soochow University(google translate)',
         url: 'https://shxy-suda-edu-cn.translate.goog/15323/list.htm?_x_tr_sch=http&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=ja&_x_tr_pto=wapp'
       },
       {
@@ -231,7 +231,7 @@ export default Vue.extend({
         url: 'https://yonsei.pure.elsevier.com/en/organisations/department-of-library-and-information-science/persons/'
       },
       {
-        university: 'Zhengzhou University(翻訳済み)',
+        university: 'Zhengzhou University(google translate)',
         url: 'https://www5-zzu-edu-cn.translate.goog/xxgl/info/1011/1476.htm?_x_tr_sch=http&_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=ja&_x_tr_pto=wapp4'
       },
       {

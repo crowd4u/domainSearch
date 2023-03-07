@@ -2,7 +2,7 @@
   <v-app>
     <v-main>
     <v-container class="container">
-      <selectbox />
+      <!-- <selectbox /> -->
       <dataTable />
     </v-container>
     </v-main>
@@ -11,11 +11,11 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import selectbox from './components/selectbox.vue'
+// import selectbox from './components/selectbox.vue'
 import dataTable from './components/table.vue'
 export default Vue.extend({
   components: {
-    selectbox,
+    // selectbox,
     dataTable
   }
 })
