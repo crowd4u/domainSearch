@@ -7,7 +7,7 @@
       </v-row>
     <v-card>
       <v-card-title>
-        Search by multiple
+        Search by multiple domains
         <v-spacer></v-spacer>
       </v-card-title>
       <v-data-table :headers="headers" :items="batch" :items-per-page="-1">
@@ -24,7 +24,7 @@
 
     <v-card>
       <v-card-title>
-        Search individually
+        Search by individual domain
         <v-spacer></v-spacer>
         <v-text-field v-model="search" append-icon="mdi-magnify" label="search for the registrered institution" single-line hide-details></v-text-field>
       </v-card-title>
